@@ -1,0 +1,59 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Results and outputs
+models_langchain/results/*.json
+models_langchain/results/*.csv
+models_langchain/results/*.png
+models_langchain/results/*.jpg
+
+# Large data files (optional - comment out if you want to include them)
+# *.csv
+# Agriculture_KnowledgeGraph/demo/static/
+# Agriculture_KnowledgeGraph/MyCrawler/data/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Neo4j temporary files
+.neo4j/
