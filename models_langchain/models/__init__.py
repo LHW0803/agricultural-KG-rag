@@ -1,4 +1,11 @@
-from .basic_llm import BasicLLM
-from .graph_rag import GraphRAG
+try:
+    from .basic_llm import BasicLLM
+except ImportError:
+    BasicLLM = None
 
-__all__ = ['BasicLLM', 'GraphRAG']
+try:
+    from .proper_langchain_graphrag import ProperLangChainGraphRAG
+except ImportError:
+    ProperLangChainGraphRAG = None
+
+__all__ = ['BasicLLM', 'ProperLangChainGraphRAG']

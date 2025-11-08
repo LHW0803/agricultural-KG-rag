@@ -2,7 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(cat:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(python:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:docs.langchain.com)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(pip install:*)",
+      "Bash(rm:*)",
+      "Bash(pip uninstall:*)",
+      "Bash(timeout 60 python:*)"
     ],
     "deny": []
   }

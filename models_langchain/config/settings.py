@@ -13,9 +13,9 @@ class Settings:
     OPENAI_MAX_TOKENS: int = 500
     
     # Neo4j Settings
-    NEO4J_URI: str = "bolt://localhost:7687"  # Note: Bolt protocol uses port 7687
+    NEO4J_URI: str = "neo4j://127.0.0.1:7687"  # Updated with your Neo4j Desktop URI
     NEO4J_USERNAME: str = "neo4j"
-    NEO4J_PASSWORD: str = "123456"
+    NEO4J_PASSWORD: str = "12345678"
     
     # Data Settings
     QA_DATASET_PATH: str = r"C:\Users\leehyunwoo08\Desktop\졸논\model\qa_dataset.json"

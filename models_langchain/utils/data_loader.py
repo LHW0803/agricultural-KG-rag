@@ -5,22 +5,39 @@ import random
 class DataLoader:
     """Load and manage QA dataset"""
     
-    def __init__(self, data_path: str):
+    def __init__(self, data_path: str = None):
         """
         Initialize DataLoader
         
         Args:
-            data_path: Path to qa_dataset.json
+            data_path: Path to qa_dataset.json (optional, can be loaded later)
         """
         self.data_path = data_path
         self.data = []
-        self.load_data()
+        if data_path:
+            self.load_data()
         
     def load_data(self):
         """Load data from JSON file"""
+        if not self.data_path:
+            raise ValueError("data_path must be set before loading data")
         with open(self.data_path, 'r', encoding='utf-8') as f:
             self.data = json.load(f)
         print(f"Loaded {len(self.data)} QA pairs from {self.data_path}")
+    
+    def load_qa_dataset(self, data_path: str) -> List[Dict[str, Any]]:
+        """
+        Load QA dataset from file
+        
+        Args:
+            data_path: Path to qa_dataset.json
+            
+        Returns:
+            List of QA pairs
+        """
+        self.data_path = data_path
+        self.load_data()
+        return self.data
         
     def get_questions(self) -> List[str]:
         """Get all questions"""
